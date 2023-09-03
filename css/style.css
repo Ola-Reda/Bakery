@@ -1,0 +1,115 @@
+:root {
+    --main-color: #ef7998;
+    --secondary-color: rgb(249, 228, 148);
+    --white-color: #fff;
+    --black-color: #000; 
+    --yellow-color:  rgba(249, 228, 148, 0.5);
+    --grey-color: rgb(238, 238, 238)
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Kaushan Script', cursive;
+}
+/*start header*/
+nav .nav-item .nav-link,
+.navbar-nav .nav-link.active {
+    color: var(--main-color);
+    font-size: 20px;
+    transition: .4s ease-in-out;
+}
+nav .nav-item .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+    color: var(--black-color);
+}
+.navbar-toggler {
+    border: none;
+    color: var(--main-color);
+    font-size: 28px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/*end header*/
+/*start main*/
+main {
+    background: url(../images/headerBcg.jpeg) center fixed;
+    background-size: cover;
+    height: calc(100vh - 76px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--yellow-color), var(--yellow-color));
+}
+main .text {
+    position: relative;
+    z-index: 111;
+}
+main .text h1{
+    color: var(--white-color);
+    text-transform: capitalize;
+    margin-bottom: 22px;
+}
+main .text h1 span {
+    color: var(--main-color);
+    font-size: 64px;
+}
+main .text a {
+    color: var(--black-color);
+    border: 3px solid var(--black-color);
+    border-radius: 4px;
+    transition: .5s ease-in-out;
+    font-size: 18px;
+    padding: 5px 12px;
+}
+main .text a:hover {
+    background-color: var(--black-color);
+    color: var(--main-color);
+}
+/*end main*/
+/*start about*/
+.about {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.about h2 {
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+.about h2 span {
+    color: var(--main-color);
+    font-size: 50px;
+}
+.about p {
+    width: 81%;
+    margin-bottom: 25px;
+}
+.about .text a {
+    color: var(--black-color);
+    border: 1px solid var(--black-color);
+    border-radius: 4px;
+    transition: .4s ease-in;
+    padding: 4px 10px;
+}
+.about .text a:hover {
+    background-color: var(--black-color);
+    color: var(--main-color);
+}
+/*end about*/
+/*start footer*/
+footer {
+    background: var(--yellow-color);
+    color: var(--main-color);
+    font-size: 18px;
+}
+/*end footer*/
