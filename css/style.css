@@ -126,6 +126,9 @@ main .text a:hover {
     color: var(--main-color);
     font-size: 50px;
 }
+.store ul {
+    width: 65%;
+}
 .store ul.links li {
     border: 1px solid var(--black-color);
     border-radius: 4px;
