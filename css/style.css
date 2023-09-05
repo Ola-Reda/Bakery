@@ -31,6 +31,26 @@ nav .nav-item .nav-link:hover,
 .navbar-toggler:focus {
     box-shadow: none;
 }
+/*start nav items cart*/
+.items p a {
+    color: var(--main-color);
+    transition: .4s ease-in;
+}
+.items p a:hover {
+    color: var(--black-color);
+}
+.items button {
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: .2s ease-in;
+}
+.items button:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-color: var(--main-color);
+}
+/*end nav items cart*/
 /*end header*/
 /*start main*/
 main {
@@ -127,13 +147,19 @@ main .text a:hover {
     font-size: 50px;
 }
 .store ul {
-    width: 65%;
+    width: 60%;
 }
 .store ul.links li {
     border: 1px solid var(--black-color);
     border-radius: 4px;
     padding: 5px 12px;
     margin: 13px 20px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.store ul.links li.active {
+    background-color: var(--black-color);
+    color: var(--main-color);
 }
 .store form input {
     width: 45%;
@@ -158,5 +184,8 @@ footer {
     background: var(--yellow-color);
     color: var(--main-color);
     font-size: 18px;
+}
+.hide {
+    display: none;
 }
 /*end footer*/
