@@ -96,7 +96,26 @@ main .text a:hover {
     background-color: var(--black-color);
     color: var(--main-color);
 }
+main .cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 200px;
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    transition: .4s ease-in-out;
+}
+.show {
+    display: block  !important; 
+}
 /*end main*/
+/*for all*/
+h2 span {
+    color: var(--main-color);
+    font-size: 50px;
+}
+/*for all*/
 /*start about*/
 .about {
     padding-top: 80px;
@@ -105,10 +124,6 @@ main .text a:hover {
 .about h2 {
     text-transform: capitalize;
     margin-bottom: 16px;
-}
-.about h2 span {
-    color: var(--main-color);
-    font-size: 50px;
 }
 .about p {
     width: 81%;
@@ -141,10 +156,6 @@ main .text a:hover {
     background-color: var(--grey-color);
     padding-top: 70px;
     padding-bottom: 60px;
-}
-.store h2 span {
-    color: var(--main-color);
-    font-size: 50px;
 }
 .store ul {
     width: 60%;
@@ -206,6 +217,48 @@ main .text a:hover {
     color: var(--white-color);
 }
 /*end store*/
+/*start section chef*/
+.chef {
+    padding-top: 55px;
+    padding-bottom: 65px;
+}
+.chef .box img {
+    transition: all .6s ease-in;
+}
+.chef .box:hover img {
+    transform: scale(1.1);
+    filter: blur(4px);
+}
+.chef .box .icons {
+    position: absolute;
+    top: 45%;
+    left: 32%;
+}
+.chef .box svg {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    font-size: 18px;
+    margin-left: 5px;
+    transition: all .8s ease-in;
+    opacity: 0;
+}
+.chef .box:hover svg {
+    opacity: .8;
+}
+/*end section chef*/
+/*start contact*/
+.contact {
+    background-color: var(--grey-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.contact form label {
+    color: var(--main-color);
+}
+/*end contact*/
 /*start footer*/
 footer {
     background: var(--yellow-color);
