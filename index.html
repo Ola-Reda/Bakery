@@ -54,10 +54,10 @@
                                     + 123 456 789
                                 </a>
                             </p>
-                            <button id="cart-info" class="cart-info ms-5 d-flex align-items-center justify-content-center">
+                            <div id="cart-info" class="cart-info ms-5 d-flex align-items-center justify-content-center">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p class="mb-0 ms-2">items - $10.49</p>
-                            </button>
+                            </div>
                         </div>
                         <!--end nav items cart-->
                     </div>
@@ -96,8 +96,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="text mb-5">
-                            <h2>about <span>us</span></h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis dolorum molestias blanditiis amet reprehenderit sed porro fuga cumque ab delectus ut aperiam quos expedita at, illo accusantium quisquam voluptates?</p>
+                            <h2 class="text-capitalize mb-3">about<span>us</span></h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis dolorum molestias blanditiis amet reprehenderit sed porro fuga cumque ab delectus ut aperiam quos expedita at, illo accusantium quisquam voluptates?</p>
                             <a href="#" class="text-uppercase text-decoration-none">explore</a>
                         </div>
                     </div>
@@ -113,30 +113,19 @@
         <!--start section store-->
         <section class="store" id="store">
             <div class="container">
-                <h2 class="text-center text-capitalize">our<span> store</span></h2>
+                <h2 class="text-center text-capitalize mb-4">our<span> store</span></h2>
                 <div>
-                    <ul class="row links list-unstyled m-auto text-uppercase text-center">
-                        <!-- <li class="col" data-filter="*">all</li>
-                        <li class="col" data-filter=".cakes">cakes</li>
-                        <li class="col" data-filter=".cupcakes">cupcakes</li>
-                        <li class="col" data-filter=".sweets">sweets</li>
-                        <li class="col" data-filter=".doughnuts">doughnuts</li> -->
+                    <ul class="links list-unstyled d-flex align-items-center justify-content-center flex-wrap text-uppercase text-center">
+                    <!--links-->
                     </ul>
-                    <form class="mt-3 mb-4 d-flex align-items-center justify-content-center">
-                        <button  class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" placeholder="item....." id="item">
+                    <!--form-->
+                    <form class="mb-4 m-auto d-flex align-items-center justify-content-center">
+                        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="input" type="text" placeholder="item....." id="item">
                     </form>
                 </div>
+                <!--products-->
                 <div class="row box">
-                    <!-- <div class="col-md-4">
-                        <div class="card mt-3">
-                            <img src="images/cake-1.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body d-flex align-items-center justify-content-between">
-                                <h5 class="card-title">sweet item</h5>
-                                <p class="card-text">$8</p>
-                            </div>
-                        </div>
-                    </div>-->
                 </div>
             </div>
         </section>
@@ -153,36 +142,6 @@
             <div class="container">
                 <h2 class="text-center text-capitalize mb-5">master<span> chefs</span></h2>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="box mb-4 position-relative overflow-hidden rounded">
-                            <img src="images/team-1.jpg" alt="image" class="img-fluid">
-                            <div class="icons">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box mb-4 position-relative overflow-hidden rounded">
-                            <img src="images/team-2.jpg" alt="image" class="img-fluid">
-                            <div class="icons">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box mb-4 position-relative overflow-hidden rounded">
-                            <img src="images/team-3.jpg" alt="image" class="img-fluid">
-                            <div class="icons">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -191,32 +150,32 @@
         <section class="contact" id="contact">
             <div class="container">
                 <h2 class="text-center text-capitalize">order your <span>cake</span></h2>
-                <form class="w-50 m-auto">
-                    <div class="mb-3">
+                <form class="d-flex align-items-center flex-wrap gap-4 mt-5" autocomplete="off">
+                    <div>
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" required>
                     </div>
-                    <div class="mb-3">
+                    <div>
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" required>
                     </div>
-                    <div class="mb-3">
+                    <div>
                         <label for="address" class="form-label">Address</label>
-                        <input type="address" class="form-control" id="address">
+                        <input type="address" class="form-control" id="address" required>
                     </div>
-                    <div class="mb-3">
+                    <div>
                         <label for="phone" class="form-label">Phone</label>
-                        <input type="phone" class="form-control" id="phone">
+                        <input type="phone" class="form-control" id="phone" required>
                     </div>
-                    <div class="mb-3">
+                    <div>
                         <label for="date" class="form-label">Date</label>
                         <input type="date" class="form-control" id="date">
                     </div>
-                    <div class="mb-3">
+                    <div>
                         <label for="time" class="form-label">Time</label>
                         <input type="time" class="form-control" id="time">
                     </div>
-                    <button type="submit" class="btn">make a reservaion</button>
+                    <button type="submit" class="btn m-auto mt-3">make a reservaion</button>
                 </form>
             </div>
         </section>

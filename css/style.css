@@ -4,25 +4,38 @@
     --white-color: #fff;
     --black-color: #000; 
     --yellow-color:  rgba(249, 228, 148, 0.5);
-    --grey-color: rgb(238, 238, 238)
+    --grey-color: rgb(238, 238, 238);
+    --padding-top: px;
+    --padding-bottom: px;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Kaushan Script', cursive;
 }
-/*start header*/
+
+/********for all heading********/
+h2 span {
+    color: var(--main-color);
+    font-size: 50px;
+}
+/********for all heading********/
+/********start header********/
 nav .nav-item .nav-link,
 .navbar-nav .nav-link.active {
     color: var(--main-color);
     font-size: 20px;
     transition: .4s ease-in-out;
 }
+
 nav .nav-item .nav-link:hover,
 .navbar-nav .nav-link.active:hover {
     color: var(--black-color);
 }
+
 .navbar-toggler {
     border: none;
     color: var(--main-color);
@@ -31,28 +44,33 @@ nav .nav-item .nav-link:hover,
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
 /*start nav items cart*/
 .items p a {
     color: var(--main-color);
     transition: .4s ease-in;
 }
+
 .items p a:hover {
     color: var(--black-color);
 }
-.items button {
+
+.items .cart-info {
     background-color: transparent;
     padding: 5px 10px;
+    border: 1px solid var(--black-color);
     border-radius: 4px;
     transition: .3s ease-in;
 }
-.items button:hover {
+
+.items .cart-info:hover {
     background-color: var(--main-color);
     color: var(--white-color);
     border-color: var(--main-color);
 }
 /*end nav items cart*/
-/*end header*/
-/*start main*/
+/********end header********/
+/********start main********/
 main {
     background: url(../images/headerBcg.jpeg) center fixed;
     background-size: cover;
@@ -62,6 +80,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 main::before {
     content: '';
     position: absolute;
@@ -71,19 +90,23 @@ main::before {
     height: 100%;
     background: linear-gradient(var(--yellow-color), var(--yellow-color));
 }
+
 main .text {
     position: relative;
     z-index: 111;
 }
+
 main .text h1{
     color: var(--white-color);
     text-transform: capitalize;
     margin-bottom: 22px;
 }
+
 main .text h1 span {
     color: var(--main-color);
     font-size: 64px;
 }
+
 main .text a {
     color: var(--black-color);
     border: 3px solid var(--black-color);
@@ -92,54 +115,51 @@ main .text a {
     font-size: 18px;
     padding: 5px 12px;
 }
+
 main .text a:hover {
     background-color: var(--black-color);
     color: var(--main-color);
 }
+
 main .cart {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 34px;
     width: 280px;
     height: 200px;
     display: none;
     background: rgba(255, 255, 255, 0.5);
     transition: .4s ease-in-out;
 }
+
 .show {
     display: block  !important; 
+    transform: translate();
 }
-/*end main*/
-/*for all*/
-h2 span {
-    color: var(--main-color);
-    font-size: 50px;
-}
-/*for all*/
-/*start about*/
+/********end main********/
+/********start about********/
 .about {
     padding-top: 80px;
     padding-bottom: 60px;
 }
-.about h2 {
-    text-transform: capitalize;
-    margin-bottom: 16px;
+
+.about .text {
+    width: 82%;
 }
-.about p {
-    width: 81%;
-    margin-bottom: 25px;
-}
+
 .about .text a {
     color: var(--black-color);
+    padding: 4px 10px;
     border: 1px solid var(--black-color);
     border-radius: 4px;
     transition: .4s ease-in;
-    padding: 4px 10px;
 }
+
 .about .text a:hover {
     background-color: var(--black-color);
     color: var(--main-color);
 }
+
 .about .image::before {
     content: '';
     position: absolute;
@@ -150,17 +170,15 @@ h2 span {
     border: 7px solid var(--secondary-color);
     z-index: -1;
 }
-/*end about*/
-/*start store*/
+/********end about********/
+/********start store********/
 .store {
     background-color: var(--grey-color);
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 60px;
 }
-.store ul {
-    width: 60%;
-}
-.store ul.links li {
+/**links**/
+.store ul li {
     border: 1px solid var(--black-color);
     border-radius: 4px;
     padding: 5px 12px;
@@ -168,72 +186,101 @@ h2 span {
     transition: .5s ease-in-out;
     cursor: pointer;
 }
-.store ul.links li.active {
+
+.store ul li.active {
     background-color: var(--black-color);
     color: var(--main-color);
 }
-.store form input {
-    width: 45%;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    outline: none;
-    border: 1px solid rgb(220 211 202);
-    padding: 4px 12px;
-    caret-color: var(--main-color);
+/**form**/
+.store form {
+    width: 600px;
 }
+
+.store form input {
+    color: var(--main-color);
+    padding: 4px 12px;
+    border: 1px solid rgb(220 211 202);
+    border-radius: 0px 4px 4px 0px;
+    outline: none;
+    flex: 1;
+    caret-color: var(--main-color);
+    transition: .4s ease-in;
+}
+
+.store form input:focus {
+    border-color: var(--secondary-color);
+}
+
 .store form button {
     background-color: var(--main-color);
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    padding: 5px 12px;
-    border: none;
+    color: var(--white-color);
+    padding: 4px 12px;
+    border: 1px solid var(--main-color);
+    border-radius: 4px 0px 0px 4px;
     outline: none;
+    transition: .6s ease-in;
 }
+
+.store form button:hover {
+    background-color: transparent;
+    color: var(--black-color);
+    border-color: var(--black-color);
+}
+/**products**/
 .store .card-image {
+    position: relative;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
 }
+
 .store .card .card-image img {
     transition: .8s ease-in-out;
 }
+
 .store .card .card-image:hover img {
     transform: scale(1.1);
 }
+
 .store .card-image svg {
     position: absolute;
     right: 0;
     bottom: 0;
     background-color: var(--secondary-color);
     padding: 12px;
-    border-top-left-radius: 15px;
-    transition: .8s ease-in-out;
+    border-radius: 15px 0px 0px 0px;
     transform: translate(100%, 100%);
+    transition: .8s ease-in-out;
 }
+
 .store .card-image:hover svg {
     transform: translate(0, 0);
 }
+
 .store .card-image svg:hover {
     color: var(--white-color);
 }
-/*end store*/
-/*start section chef*/
+/********end store********/
+/********start chef********/
 .chef {
     padding-top: 55px;
     padding-bottom: 65px;
 }
+
 .chef .box img {
     transition: all .6s ease-in;
 }
+
 .chef .box:hover img {
     transform: scale(1.1);
     filter: blur(4px);
 }
+
 .chef .box .icons {
     position: absolute;
     top: 45%;
     left: 32%;
 }
+
 .chef .box svg {
     background-color: var(--secondary-color);
     color: var(--main-color);
@@ -245,27 +292,49 @@ h2 span {
     transition: all .8s ease-in;
     opacity: 0;
 }
+
 .chef .box:hover svg {
     opacity: .8;
 }
-/*end section chef*/
-/*start contact*/
+/********end chef********/
+/********start contact********/
 .contact {
     background-color: var(--grey-color);
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.contact form div {
+    width: 46%;
+}
+
 .contact form label {
     color: var(--main-color);
 }
-/*end contact*/
-/*start footer*/
+
+.contact form input:focus {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.contact form button {
+    border: 1px solid var(--black-color);
+    transition: .4s ease-in;
+}
+
+.contact form button:hover {
+    background-color: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+/********end contact********/
+/********start footer********/
 footer {
     background: var(--yellow-color);
     color: var(--main-color);
     font-size: 18px;
 }
-.hide {
+/* .hide {
     display: none;
-}
-/*end footer*/
+} */
+/********end footer********/
