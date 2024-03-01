@@ -259,6 +259,12 @@ main .cart {
 .store .card-image svg:hover {
     color: var(--white-color);
 }
+
+@media (max-width: 767px) {
+    .store form {
+        width: 100%;
+    }
+}
 /********end store********/
 /********start chef********/
 .chef {
