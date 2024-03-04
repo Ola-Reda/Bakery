@@ -15,8 +15,12 @@ html {
 
 body {
     font-family: 'Kaushan Script', cursive;
-}
+    /* font-family: "Roboto", sans-serif; */
 
+}
+a {
+    text-decoration: none;
+}
 /********for all heading********/
 h2 span {
     color: var(--main-color);
@@ -227,6 +231,19 @@ main .cart {
     border-color: var(--black-color);
 }
 /**products**/
+.box-content {
+    animation: fade .5s ease-in;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .store .card-image {
     position: relative;
     overflow: hidden;
@@ -266,8 +283,91 @@ main .cart {
     }
 }
 /********end store********/
+/********end review********/
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+article .image {
+    position: relative;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+article .image::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 7px;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+article img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+article h4 {
+    margin-bottom: 5px;
+}
+
+article span {
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article .btns button {
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    margin: 0px 10px;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+
+article .btns button:hover {
+    color: var(--black-color);
+}
+
+article .btn {
+    background-color: transparent;
+    color: var(--black-color);
+    border-color: var(--black-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+
+article .btn:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-color: var(--main-color);
+}
+/********end review********/
 /********start chef********/
 .chef {
+    background-color: var(--grey-color);
     padding-top: 55px;
     padding-bottom: 65px;
 }
@@ -305,7 +405,6 @@ main .cart {
 /********end chef********/
 /********start contact********/
 .contact {
-    background-color: var(--grey-color);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -337,10 +436,74 @@ main .cart {
 /********start footer********/
 footer {
     background: var(--yellow-color);
+}
+
+footer h4 {
+    color: var(--main-color);
+}
+
+footer ul {
+    line-height: 2;
+}
+
+footer a {
+    color: var(--black-color);
+    transition: .6s ease-in;
+}
+
+footer a:hover {
+    color: var(--main-color);
+}
+
+footer .about-us p {
+    font-size: 15px;
+}
+
+footer .about-us svg {
+    color: var(--black-color);
+    transition: .4s ease-in;
+}
+
+footer .about-us svg:hover {
+    color: var(--main-color);
+}
+
+footer .links a:hover {
+    padding-left: 10px;
+}
+
+footer .contact-us span {
+    font-size: 14px;
+}
+
+footer .contact-us svg {
+    color: var(--main-color);
+    margin-right: 8px;
+    transition: .4s ease-in;
+}
+
+footer .open ul {
+    line-height: 1.6;
+}
+
+footer .open li {
+    margin-bottom: 12px;
+}
+
+footer .open p {
+    margin-bottom: 0px;
+}
+
+footer .open span {
+    font-size: 12px;
+    color: var(--main-color);
+}
+
+footer .copy-right {
     color: var(--main-color);
     font-size: 18px;
+    border-top: 1px dotted var(--main-color);
+    padding-top: 15px;
+    margin-top: 12px;
 }
-/* .hide {
-    display: none;
-} */
 /********end footer********/

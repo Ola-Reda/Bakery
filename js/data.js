@@ -101,4 +101,32 @@ const chefData = [
         name: 'Susan Smith',
         image: 'images/team-3.jpg',
     }
-]
+];
+
+
+const reviewData = [
+    {
+        id: 1,
+        name: "susan smith",
+        img: "images/person-1_rfzshl.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. sed porro fuga cumque ab delectus ut aperiam quos expedita at, illo accusantium quisquam voluptates?",
+    },
+    {
+        id: 2,
+        name: "anna johnson",
+        img: "images/person-2_np9x5l.jpg",
+        text: "Tempora perferendis dolorum molestias blanditiis amet reprehenderit sed porro fuga cumque ab delectus ut aperiam quos expedita at, illo accusantium quisquam voluptates?",
+    },
+    {
+        id: 3,
+        name: "peter jones",
+        img: "images/person-3_ipa0mj.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis dolorum molestias blanditiis amet reprehenderit sed porro fuga cumque ab delectus ut aperiam quos expedita",
+    },
+    {
+        id: 4,
+        name: "bill anderson",
+        img: "images/person-4_t9nxjt.jpg",
+        text: "Tempora perferendis dolorum molestias blanditiis amet reprehenderit sed porro fuga cumque ab delectus ut aperiam quos expedita at, illo accusantium quisquam voluptates? ",
+    },
+];

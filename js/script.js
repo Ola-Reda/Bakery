@@ -37,6 +37,7 @@ window.onload = function() {
     displayLinks();
     addProducts(products)
     showChef(chefData)
+    addPerson(currentItem);
 }
 
 
@@ -86,7 +87,7 @@ function addProducts(products) {
     let drawProducts = ''
     products.forEach((product) => {
         drawProducts += `
-            <div class="col-md-4">
+            <div class="col-md-4 box-content">
                 <div class="card mt-3 mb-3" id="${product.id}">
                     <div class="card-image">
                         <img src=${product.image} class="card-img-top image" alt="image">
@@ -109,7 +110,8 @@ function addProducts(products) {
 const searchBtn = document.querySelector('.search')
 const input = document.querySelector('.input')
 searchBtn.addEventListener('click', search)
-function search() {
+function search(e) {
+    e.preventDefault()
     const value = input.value
     if(value !== "") {
         const filteredProducts = products.filter(product => {
@@ -120,7 +122,7 @@ function search() {
 }
 
 
-
+////////Chefs///////////
 //function to display chef data
 const chefBox = document.querySelector('.chef .row')
 function showChef(data) {
@@ -140,4 +142,61 @@ function showChef(data) {
         `
     })
     chefBox.innerHTML = display
+}
+
+
+
+///////////Reviews///////////////
+const box = document.querySelector('.box .content')
+const prevBtn = document.querySelector('.prev')
+const nextBtn = document.querySelector('.next')
+const randomBtn = document.querySelector('.random')
+
+
+let currentItem = 0;
+let draw;
+
+
+
+//function display person
+function addPerson(currentItem) {
+    let person = reviewData[currentItem]
+        draw =
+        `
+        <div class="image">
+            <img src="${person.img}" alt="person-1">
+        </div>
+        <h4>${person.name}</h4>
+        <p>
+            ${person.text}
+        </p>
+        `
+    box.innerHTML = draw
+}
+
+//function display prev person
+prevBtn.addEventListener("click", prevPerson)
+function prevPerson() {
+    currentItem--
+    if(currentItem < 0) {
+        currentItem = reviewData.length-1
+    }
+    addPerson(currentItem)
+}
+
+//function display next person
+nextBtn.addEventListener("click", nextPerson)
+function nextPerson() {
+    currentItem++
+    if(currentItem > reviewData.length-1) {
+        currentItem = 0
+    }
+    addPerson(currentItem)
+}
+
+//function display random person
+randomBtn.addEventListener("click", randomPerson)
+function randomPerson() {
+    currentItem = Math.floor(Math.random() * reviewData.length)
+    addPerson(currentItem)
 }
